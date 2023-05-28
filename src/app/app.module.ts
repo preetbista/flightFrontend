@@ -11,6 +11,7 @@ import { UserModule } from './user/user.module';
 import { AdminModule } from './admin/admin.module';
 import { AboutComponent } from './user/about/about.component';
 import { HomeComponent } from './user/home/home.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -18,16 +19,15 @@ import { HomeComponent } from './user/home/home.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    LoginComponent,
-    AboutComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthModule,
-    UserModule,
-    AdminModule
+    RouterModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

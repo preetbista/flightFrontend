@@ -11,7 +11,6 @@ import { AuthRoutingModule } from './auth.routing';
   ],
   imports: [
     CommonModule,
-    AuthModule,
     AuthRoutingModule
   ]
 })
