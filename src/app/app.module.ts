@@ -9,6 +9,7 @@ import { UserModule } from './user/user.module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './user/home/home.component';
 import { AboutComponent } from './user/about/about.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -21,7 +22,8 @@ import { AboutComponent } from './user/about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModule
+    UserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

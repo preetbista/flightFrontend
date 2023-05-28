@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './user/home/home.component';
 import { AboutComponent } from './user/about/about.component';
 import { PageNotFoundComponent } from './user/page-not-found/page-not-found.component';
+import { BookFlightComponent } from './user/book-flight/book-flight.component';
+import { ContactUsComponent } from './user/contact-us/contact-us.component';
 
 const routes: Routes = [{
   path:'',
@@ -16,6 +18,15 @@ const routes: Routes = [{
 {
   path: 'about',
   component: AboutComponent
+},
+{
+  path:'book-flight',
+  component: BookFlightComponent
+},
+
+{
+  path: 'contact',
+  component: ContactUsComponent
 },
 {
   path: 'auth',

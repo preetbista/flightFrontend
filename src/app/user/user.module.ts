@@ -4,16 +4,21 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { UserComponent } from './user.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { UserRoutingModule } from './user.routing';
 
 @NgModule({
   declarations: [
     HomeComponent,
     AboutComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    UserComponent,
+
   ],
   imports: [
     CommonModule,
-    RouterModule
+    UserRoutingModule
   ]
 })
 export class UserModule { }

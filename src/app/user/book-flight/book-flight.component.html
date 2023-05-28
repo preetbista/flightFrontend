@@ -1,0 +1,80 @@
+<html>
+<div class="form">
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Book Flight</ng-template>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <mat-form-field style="margin-left: 50px;">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field style="margin-left: 50px;">
+          <mat-label>Travel Date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <div style="margin-top: 10px;"></div>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput placeholder="Address" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <mat-form-field style="margin-left: 50px;">
+          <mat-label>Phone Number</mat-label>
+          <input matInput type="number" placeholder="Mobile Number" maxlength="10" formControlName="firstCtrl" required>
+
+        </mat-form-field>
+        <div style="margin-top: 10px;"></div>
+        <mat-form-field>
+          <mat-label>Departure Airport</mat-label>
+          <mat-select>
+            <mat-option value="option">Kathmandu</mat-option>
+            <mat-option value="option">Pokhara</mat-option>
+            <mat-option value="option">Biratnagar</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field style="margin-left: 50px;">
+          <mat-label>Arrival Airport</mat-label>
+          <mat-select>
+            <mat-option value="option">Doha</mat-option>
+            <mat-option value="option">Etihad</mat-option>
+            <mat-option value="option">Barcelona</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Payment Details">
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="Pulchowk, Lalitpur" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</div>
+
+</html>
