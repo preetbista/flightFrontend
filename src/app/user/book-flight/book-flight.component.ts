@@ -7,6 +7,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { Component } from '@angular/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgIf } from '@angular/common';
 
 /**
  * @title Stepper overview
@@ -25,7 +27,8 @@ import {MatNativeDateModule} from '@angular/material/core';
     MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    NgIf
   ],
 })
 export class BookFlightComponent {

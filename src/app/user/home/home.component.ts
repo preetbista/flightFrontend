@@ -1,16 +1,21 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  // constructor(private _router: Router) {}
+  constructor(private _router: Router) {}
 
-  // public contactEvent(): void {
-  //   this._router.navigate(['contact'])
-  // }
+  public bookFlightEvent(): void {
+    this._router.navigate(['book-flight'])
+  }
+
+
+
 
 }
