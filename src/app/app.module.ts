@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './user/home/home.component';
 import { AboutComponent } from './user/about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModuleModule } from './shared-module/shared-module.module';
 
 
 
@@ -23,7 +24,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     UserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    SharedModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
