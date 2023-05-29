@@ -11,6 +11,7 @@ import { HomeComponent } from './user/home/home.component';
 import { AboutComponent } from './user/about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModuleModule } from './shared-module/shared-module.module';
+import { AdminModule } from './admin/admin.module';
 
 
 
@@ -25,7 +26,8 @@ import { SharedModuleModule } from './shared-module/shared-module.module';
     AppRoutingModule,
     UserModule,
     BrowserAnimationsModule,
-    SharedModuleModule
+    SharedModuleModule,
+    AdminModule
   ],
   providers: [],
   bootstrap: [AppComponent]

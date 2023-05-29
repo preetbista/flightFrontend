@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900);
 
 
-body{
+.header{
   background-color: #1f2029;
   display: flex;
   flex-direction: column;
@@ -58,8 +58,9 @@ p {
   box-sizing: border-box
 }
 
-.mySlides {
-  display: none
+.Containers {
+  display: none;
+
 }
 
 img {
@@ -78,15 +79,15 @@ img {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 48%;
   width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
+  margin-top: -23px;
+  padding: 17px;
+  color: grey;
   font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  font-size: 19px;
+  transition: 0.4s ease;
+  border-radius: 0 5px 5px 0;
   user-select: none;
 }
 
@@ -141,27 +142,19 @@ img {
 
 /* Fading animation */
 .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
 }
 
 @keyframes fade {
-  from {
-    opacity: .4
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-
-  .prev,
-  .next,
-  .text {
-    font-size: 11px
-  }
+  from {opacity: .5}
+  to {opacity: 2}
 }
 

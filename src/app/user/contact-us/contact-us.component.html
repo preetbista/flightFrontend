@@ -4,7 +4,7 @@
   <div class="card card-2" cdkDrag>
     <mat-form-field appearance="outline" style="margin-top: 10px; width: 270px;">
       <mat-label>Name</mat-label>
-      <input matInput placeholder="Your Name" [formControl]="name" required="">
+      <input matInput placeholder="Your Name" [formControl]="name" required>
       <mat-error *ngIf="name.invalid">{{getErrorName()}}</mat-error>
     </mat-form-field>
 
