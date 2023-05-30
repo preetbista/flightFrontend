@@ -5,18 +5,22 @@ import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user.component';
 import { UserRoutingModule } from './user.routing';
 import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     AboutComponent,
     UserComponent,
+    TeamComponent,
 
   ],
   imports: [
     CommonModule,
     UserRoutingModule,
-    NgbCarousel
+    NgbCarousel,
+    MdbCollapseModule
 
   ]
 })

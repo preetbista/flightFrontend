@@ -1,13 +1,15 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900);
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 
 .main{
   background-color: #1f2029;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
   height: 100%;
+
 }
 h1,
 p,
@@ -62,15 +64,28 @@ p {
   float: left;
   margin-left: 50px;
   margin-top: -10px;
+  position: relative;
+}
+.card-font{
+  font-family: 'Poppins', sans-serif;
+  color:white; padding: 20px; text-align: justify; font-size:larger;
+}
+.card-main{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr ;
+  column-gap: 0px;
 
 }
+
 
 .rightCard{
   background: #4d4342;
   border-radius: 15px;
   height: 400px;
   width: 350px;
-  margin-left: 800px;
+  margin-right: 50px;
+  margin-left: auto;
   margin-top: 50px;
   display: flex;
   align-items: center;

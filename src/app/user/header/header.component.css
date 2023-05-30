@@ -4,9 +4,9 @@
 }
 nav {
   background-color: #1f2029;
-  position: -webkit-sticky;
-  top:0px;
   position: sticky;
+  width: 100%;
+  top:0px;
   padding: 15px;
   z-index: 9999;
   backdrop-filter: blur(0.8);

@@ -5,6 +5,7 @@ import { AboutComponent } from './user/about/about.component';
 import { PageNotFoundComponent } from './shared-module/page-not-found/page-not-found.component';
 import { BookFlightComponent } from './user/book-flight/book-flight.component';
 import { ContactUsComponent } from './user/contact-us/contact-us.component';
+import { TeamComponent } from './user/team/team.component';
 
 const routes: Routes = [{
   path:'',
@@ -27,6 +28,9 @@ const routes: Routes = [{
 {
   path: 'contact',
   component: ContactUsComponent
+},{
+  path:'team',
+  component: TeamComponent
 },
 {
   path: 'auth',
