@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { UserComponent } from './user.component';
 import { UserRoutingModule } from './user.routing';
+import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,9 @@ import { UserRoutingModule } from './user.routing';
   ],
   imports: [
     CommonModule,
-    UserRoutingModule
+    UserRoutingModule,
+    NgbCarousel
+
   ]
 })
 export class UserModule { }

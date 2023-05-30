@@ -5,7 +5,6 @@ body {
 
 .card {
   background: #fff;
-
   cursor: move;
   display: flex;
   border-radius: 2px;

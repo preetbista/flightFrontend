@@ -5,7 +5,7 @@ import { Component } from "@angular/core";
   selector: 'app-user',
   template: `
   <router-outlet></router-outlet>
-  `
+  `,
 })
 export class UserComponent{
 

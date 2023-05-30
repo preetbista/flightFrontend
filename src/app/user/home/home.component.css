@@ -1,12 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900);
 
-
-.header{
+.main{
   background-color: #1f2029;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  align-items: flex-start;
+  height: 100%;
 }
 h1,
 p,
@@ -53,108 +54,87 @@ p {
   box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2);
   transition: all 0.5s ease;
 }
+.card {
+  background: #4d4342;
+  border-radius: 2px;
+  height: 400px;
+  width: 350px;
+  float: left;
+  margin-left: 50px;
+  margin-top: -10px;
 
-* {
-  box-sizing: border-box
 }
 
-.Containers {
-  display: none;
+.rightCard{
+  background: #4d4342;
+  border-radius: 15px;
+  height: 400px;
+  width: 350px;
+  margin-left: 800px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
 }
 
-img {
-  vertical-align: middle;
+.leftCard {
+  background: #4d4342;
+  border-radius: 15px;
+  height: 400px;
+  width: 350px;
+  float: left;
+  margin-left: 50px;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 48%;
-  width: auto;
-  margin-top: -23px;
-  padding: 17px;
-  color: grey;
-  font-weight: bold;
-  font-size: 19px;
-  transition: 0.4s ease;
-  border-radius: 0 5px 5px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+.rightCard img{
   width: 100%;
-  text-align: center;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+   object-fit:cover;
+   border-radius: 15px;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.leftCard img{
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+   max-height: 100%;
+   object-fit:cover;
+   border-radius: 15px;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+.card img{
+   max-width: 100%;
+    max-height: 100%;
+    object-fit:cover;
+    border-radius: 15px;
 }
 
-.active,
-.dot:hover {
-  background-color: #717171;
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  z-index: 1;
+  transition: box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+              0 2px 2px 0 rgba(0, 0, 0, 0.14),
+              0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 15px;
+
+}
+.card-2:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.4s;
-  animation-name: fade;
-  animation-duration: 1.4s;
+.card-2:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .5}
-  to {opacity: 2}
-}
-
-@keyframes fade {
-  from {opacity: .5}
-  to {opacity: 2}
-}
 
