@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './user/home/home.component';
-import { AboutComponent } from './user/about/about.component';
+import { AboutComponent } from './user/gallery/about.component';
 import { PageNotFoundComponent } from './shared-module/page-not-found/page-not-found.component';
 import { BookFlightComponent } from './user/book-flight/book-flight.component';
 import { ContactUsComponent } from './user/contact-us/contact-us.component';
@@ -17,7 +17,7 @@ const routes: Routes = [{
   component: HomeComponent
 },
 {
-  path: 'about',
+  path: 'gallery',
   component: AboutComponent
 },
 {
