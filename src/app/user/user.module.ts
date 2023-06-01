@@ -9,6 +9,7 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { TeamComponent } from './team/team.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CompanyComponent } from './company/company.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,11 @@ import { CompanyComponent } from './company/company.component';
     CommonModule,
     UserRoutingModule,
     NgbCarousel,
-    MdbCollapseModule
+    MdbCollapseModule,
+    HttpClientModule,
+  ],
+  providers: [
+
   ]
 })
 export class UserModule { }
