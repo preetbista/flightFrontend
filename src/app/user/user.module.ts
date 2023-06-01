@@ -8,6 +8,7 @@ import { NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { TeamComponent } from './team/team.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { CompanyComponent } from './company/company.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { GalleryComponent } from './gallery/gallery.component';
     UserComponent,
     TeamComponent,
     GalleryComponent,
+    CompanyComponent,
 
   ],
   imports: [

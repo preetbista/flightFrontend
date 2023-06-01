@@ -38,6 +38,10 @@ export class BookFlightComponent {
   secondFormGroup = this._formBuilder.group({
     secondCtrl: ['', Validators.required],
   });
+
+ 
+
+  selectedAirport: string;
   isLinear = true;
 
   email = new FormControl('', [Validators.required, Validators.email]);
@@ -51,5 +55,6 @@ export class BookFlightComponent {
   }
 
   constructor(private _formBuilder: FormBuilder) {}
+
 }
 
