@@ -43,7 +43,6 @@ import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    UserModule,
     BrowserAnimationsModule,
     SharedModuleModule,
     AdminModule,

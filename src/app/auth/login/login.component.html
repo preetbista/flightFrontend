@@ -21,19 +21,22 @@
                 <div class="card-front">
                   <div class="center-wrap">
                     <div class="section text-center">
-                      <h4 class="mb-4 pb-3">Log In</h4>
+                      <form (ngSubmit)="onSubmit()">
+                        <h4 class="mb-4 pb-3">Log In</h4>
+                        <div class="form-group">
+                          <input type="text" class="form-style" placeholder="Username"
+                            [(ngModel)]="credentials.userName" name="userName" />
+                          <i class="input-icon uil uil-user"></i>
 
-                      <div class="form-group">
-                        <input type="text" class="form-style" placeholder="Username" name="userName" required />
-                        <i class="input-icon uil uil-user"></i>
-
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="password" class="form-style" placeholder="Password" name="password" required
-                          ngModel />
-                        <i class="input-icon uil uil-lock-alt"></i>
-                      </div>
-                      <button class="btn mt-4">Login</button>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input type="password" class="form-style" [(ngModel)]="credentials.password"
+                            placeholder="Password" name="password" />
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+                        <button type="submit" class="btn mt-4">Login</button>
+                      </form>
+                      <p class="mb-0 mt-4 text-center">{{credentials | json}}</p>
 
                       <p class="mb-0 mt-4 text-center">
                         <a class="link">Forgot your password?</a>

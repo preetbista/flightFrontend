@@ -22,7 +22,7 @@ export class AuthInterceptor implements HttpInterceptor {
         }
       })
     }
-    debugger;
+
     return next.handle(request).pipe(catchError((error) => {debugger; return of()}) );
   }
 

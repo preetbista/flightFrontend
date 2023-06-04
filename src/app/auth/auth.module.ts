@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthRoutingModule } from './auth.routing';
 import { AuthComponent } from './auth.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
   ]
