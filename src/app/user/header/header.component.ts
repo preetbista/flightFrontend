@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoginServiceService } from 'src/app/service/login-service.service';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
+  public loggedIn = false;
 
+  constructor(private loginService: LoginServiceService) {}
+
+  ngOnInit(): void {
+    this.loggedIn=this.loginService.isLoggedIn()
+  }
+
+  logoutUser(){
+    this.loginService.logOut()
+    location.reload()
+  }
 }

@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
        .subscribe((response:any) => {
           console.log(response)
           this._loginService.loginUser(response.token)
-          window.location.href="/admin/admin"
+          window.location.href="/admin/dashboard"
        },
        error => {
           console.log(error)

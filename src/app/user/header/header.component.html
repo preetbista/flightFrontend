@@ -7,7 +7,13 @@
       <li><a class="un" routerLink="/user/gallery">Gallery</a></li>
       <li><a class="un" routerLink="/user/contact">Contact Us</a></li>
       <li>
-        <a class="un" routerLink="/auth/login">Login</a>
+        <a *ngIf="!loggedIn" class="un" routerLink="/auth/login">Login</a>
+      </li>
+      <li>
+        <a *ngIf="loggedIn" class="un" routerLink="/auth/login">Profile</a>
+      </li>
+      <li>
+        <a *ngIf="loggedIn" class="un" (click)="logoutUser()" routerLink="/auth/login">Logout</a>
       </li>
     </ul>
   </nav>
