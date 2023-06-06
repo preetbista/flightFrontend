@@ -14,17 +14,6 @@ export class AuthInterceptor implements HttpInterceptor {
   constructor(private _loginService:LoginServiceService) {}
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
-    // const token = this.getToken();
-    // if(token){
-    //   request = request.clone({
-    //     setHeaders: {
-    //       'UUID': token
-    //     }
-    //   })
-    // }
-
-    // return next.handle(request).pipe(catchError((error) => {debugger; return of()}) );
     let newRequest = request;
     let token = this._loginService.getToken()
 
@@ -37,7 +26,15 @@ export class AuthInterceptor implements HttpInterceptor {
     }
     return next.handle(newRequest)
   }
-
+    // const token = this.getToken();
+    // if(token){
+    //   request = request.clone({
+    //     setHeaders: {
+    //       'UUID': token
+    //     }
+    //   })
+    // }
+    // return next.handle(request).pipe(catchError((error) => {debugger; return of()}) );
   // private getToken() {
   //   let data = localStorage.getItem('token') || null;
   //   return data;

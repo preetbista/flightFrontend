@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginServiceService } from 'src/app/service/login-service.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,7 @@ export class HeaderComponent implements OnInit{
 
   selectedImage = '../../../assets/images/avatar3.png';
 
-  constructor(private loginService: LoginServiceService) {}
+  constructor(private loginService: LoginServiceService, private _userService: UserService) {}
 
   ngOnInit(): void {
     this.loggedIn=this.loginService.isLoggedIn()
@@ -22,5 +23,8 @@ export class HeaderComponent implements OnInit{
     this.loginService.logOut()
     location.reload()
   }
+
   showHeaderFooter:boolean = true
+
+
 }

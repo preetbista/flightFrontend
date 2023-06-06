@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 @Injectable({
   providedIn: 'root'
@@ -8,12 +9,11 @@ export class LoginServiceService {
 
   _baseUrl = "http://localhost:8085"
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {}
 
   generateToken(credentials:any){
     return this.http.post(`${this._baseUrl}/login`,credentials)
   }
-
 
   loginUser(token: string){
     localStorage.setItem("token", token)
@@ -37,4 +37,5 @@ export class LoginServiceService {
   getToken(){
     return localStorage.getItem("token")
   }
+
 }

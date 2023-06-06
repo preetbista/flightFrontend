@@ -47,7 +47,6 @@ export class LoginComponent implements OnInit {
     }else{
       console.log("Fields are empty");
     }
-
   }
 
   redirectToHomePageIfLoggedIn() {
@@ -55,8 +54,6 @@ export class LoginComponent implements OnInit {
       window.location.href = "/user/home"
     }
   }
-
-
 
 }
 

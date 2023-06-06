@@ -10,7 +10,7 @@ import { UserService } from 'src/app/service/user.service';
 })
 export class DashboardComponent {
 
-
+  public loggedIn = false;
   user:any
   constructor(private _userService: UserService, private _loginService:LoginServiceService){}
   getUser(){
@@ -28,6 +28,7 @@ export class DashboardComponent {
   logoutUser(){
     this._loginService.logOut()
     location.reload()
+    window.location.href = "auth/login"
   }
 
 
