@@ -1,14 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { LoginServiceService } from 'src/app/service/login-service.service';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: ['./dashboard.component.css'],
 })
 export class DashboardComponent {
+
+
   user:any
-  constructor(private _userService: UserService){}
+  constructor(private _userService: UserService, private _loginService:LoginServiceService){}
   getUser(){
     this._userService.getUser().subscribe(
       user =>{
@@ -20,4 +24,12 @@ export class DashboardComponent {
       }
     )
   }
+
+  logoutUser(){
+    this._loginService.logOut()
+    location.reload()
+  }
+
+
+
 }

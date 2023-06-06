@@ -10,6 +10,8 @@ import { LoginServiceService } from 'src/app/service/login-service.service';
 export class HeaderComponent implements OnInit{
   public loggedIn = false;
 
+  selectedImage = '../../../assets/images/avatar3.png';
+
   constructor(private loginService: LoginServiceService) {}
 
   ngOnInit(): void {
@@ -20,4 +22,5 @@ export class HeaderComponent implements OnInit{
     this.loginService.logOut()
     location.reload()
   }
+  showHeaderFooter:boolean = true
 }

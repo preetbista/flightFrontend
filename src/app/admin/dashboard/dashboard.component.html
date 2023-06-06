@@ -1,6 +1,10 @@
-<div class="bootstrap-wrapper">
-  <div class="container text-center mt">
-    <h1> Welcome to admin Panel</h1>
-    <button (click)="getUser()">Get Details</button>
+<body>
+  <div class="wrapper">
+    <div class="navbar">
+      <!--Top menu -->
+      <div class="sidebar">
+        <button (click)="logoutUser()" routerLink="/auth/login">Logout</button>
+      </div>
+    </div>
   </div>
-</div>
+</body>

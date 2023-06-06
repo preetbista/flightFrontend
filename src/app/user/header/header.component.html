@@ -1,20 +1,33 @@
-<div class="div-body">
-  <nav>
-    <a href="#"><img class="img" src="../../../assets/images/logo.png" /></a>
-    <ul>
-      <li><a class="un" href="" target="_parent">Home</a></li>
-      <li><a class="un" routerLink="/user/book-flight">Book Flight</a></li>
-      <li><a class="un" routerLink="/user/gallery">Gallery</a></li>
-      <li><a class="un" routerLink="/user/contact">Contact Us</a></li>
-      <li>
-        <a *ngIf="!loggedIn" class="un" routerLink="/auth/login">Login</a>
-      </li>
-      <li>
-        <a *ngIf="loggedIn" class="un" routerLink="/auth/login">Profile</a>
-      </li>
-      <li>
-        <a *ngIf="loggedIn" class="un" (click)="logoutUser()" routerLink="/auth/login">Logout</a>
-      </li>
-    </ul>
-  </nav>
+<div *ngIf="showHeaderFooter">
+  <div class="div-body">
+    <nav>
+      <a href="#"><img class="img" src="../../../assets/images/logo.png" /></a>
+      <ul>
+        <li><a class="un" href="" target="_parent">Home</a></li>
+        <li><a class="un" routerLink="/user/book-flight">Book Flight</a></li>
+        <li><a class="un" routerLink="/user/gallery">Gallery</a></li>
+        <li><a class="un" routerLink="/user/contact">Contact Us</a></li>
+        <li>
+          <a *ngIf="!loggedIn" class="un" routerLink="/auth/login">Login</a>
+        </li>
+        <li>
+          <div *ngIf="loggedIn" class="dropdown" style="cursor: pointer">
+            <img [src]="selectedImage" alt="Avatar" style="width: 35px; margin-top: 0px; margin-left: 0px" />
+            <div class="dropdown-content">
+              <img [src]="selectedImage" alt="Avatar" style="margin-left: 0px; width: 120px" />
+
+              <hr class="underline" />
+        <li>
+          <a id="lgt" *ngIf="loggedIn" class="logout">My Flight<span class="badge" style="float: right">0</span></a>
+        </li>
+
+        <li>
+          <a id="lgt" *ngIf="loggedIn" class="logout" (click)="logoutUser()" routerLink="/auth/login">Logout</a>
+        </li>
+  </div>
+</div>
+</li>
+</ul>
+</nav>
+</div>
 </div>

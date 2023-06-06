@@ -39,8 +39,6 @@ export class BookFlightComponent {
     secondCtrl: ['', Validators.required],
   });
 
- 
-
   selectedAirport: string;
   isLinear = true;
 

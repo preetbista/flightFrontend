@@ -9,7 +9,8 @@ import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
 import { TeamComponent } from './team/team.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { CompanyComponent } from './company/company.component';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { SharedModuleModule } from '../shared-module/shared-module.module';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     UserComponent,
     TeamComponent,
     GalleryComponent,
-    CompanyComponent,
-
+    CompanyComponent
   ],
   imports: [
     CommonModule,
@@ -26,9 +26,11 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
     NgbCarousel,
     MdbCollapseModule,
     HttpClientModule,
+    SharedModuleModule
   ],
   providers: [
 
-  ]
+  ],
+  exports: [UserComponent, TeamComponent, GalleryComponent, CompanyComponent],
 })
 export class UserModule { }
