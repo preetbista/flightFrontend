@@ -15,24 +15,29 @@ const routes: Routes =[
       },
       {
         path: 'gallery',
+        title: 'Gallery',
         component: GalleryComponent
       },
       {
         path:'book-flight',
+        title: 'Book Flight',
         component: BookFlightComponent,
         canActivate: [AuthGuard]
       },
       {
         path: 'contact',
+        title: 'Contact Us',
         component: ContactUsComponent,
         canActivate: [AuthGuard]
       },
       {
         path:'team',
+        title: 'Team',
         component: TeamComponent
       },
       {
         path: 'company',
+        title: 'Company',
         component: CompanyComponent
       }
 ];
