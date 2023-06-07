@@ -1,4 +1,4 @@
-import {FormBuilder, Validators, FormsModule, ReactiveFormsModule, FormControl} from '@angular/forms';
+import {FormBuilder, Validators, FormsModule, ReactiveFormsModule, FormControl, FormGroup} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
@@ -32,6 +32,9 @@ import { NgIf } from '@angular/common';
   ],
 })
 export class BookFlightComponent {
+
+ constructor(private _formBuilder: FormBuilder){}
+
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
@@ -39,7 +42,6 @@ export class BookFlightComponent {
     secondCtrl: ['', Validators.required],
   });
 
-  selectedAirport: string;
   isLinear = true;
 
   email = new FormControl('', [Validators.required, Validators.email]);
@@ -52,7 +54,7 @@ export class BookFlightComponent {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
-  constructor(private _formBuilder: FormBuilder) {}
+
 
 }
 

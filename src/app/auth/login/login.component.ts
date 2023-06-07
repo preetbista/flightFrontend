@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { LoginServiceService } from '../../service/login-service.service';
+import { UserService } from 'src/app/service/user.service';
 
 @Component({
   selector: 'app-login',
@@ -26,13 +27,15 @@ export class LoginComponent implements OnInit {
     password: ''
   }
 
-  constructor(private _loginService: LoginServiceService, private _route:Router){
+  constructor(private _loginService: LoginServiceService,private _userService:UserService , private _route:Router){
 
   }
 
   ngOnInit(): void {
     this.redirectToHomePageIfLoggedIn();
   }
+
+
   onSubmit(){
     if((this.credentials.userName !='' && this.credentials.password!='') && (this.credentials.userName!=null && this.credentials.password!= null)){
        this._loginService.generateToken(this.credentials)

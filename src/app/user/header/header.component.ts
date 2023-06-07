@@ -12,19 +12,19 @@ export class HeaderComponent implements OnInit{
   public loggedIn = false;
 
   selectedImage = '../../../assets/images/avatar3.png';
+  loggedInUsername: string;
 
   constructor(private loginService: LoginServiceService, private _userService: UserService) {}
 
   ngOnInit(): void {
     this.loggedIn=this.loginService.isLoggedIn()
+    
   }
+
 
   logoutUser(){
     this.loginService.logOut()
     location.reload()
   }
-
-  showHeaderFooter:boolean = true
-
 
 }
