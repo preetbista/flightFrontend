@@ -6,8 +6,6 @@ import { AuthComponent } from './auth.component';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from '../interceptors/auth.interceptor';
-import { HeaderComponent } from '../user/header/header.component';
-import { FooterComponent } from '../user/footer/footer.component';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
 
 
