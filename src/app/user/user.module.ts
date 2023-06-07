@@ -11,6 +11,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { CompanyComponent } from './company/company.component';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
+import { NgHelmetModule } from 'ng-helmet';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
     NgbCarousel,
     MdbCollapseModule,
     HttpClientModule,
-    SharedModuleModule
+    SharedModuleModule,
+    NgHelmetModule
   ],
   providers: [
 
