@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { LoginServiceService } from 'src/app/service/login-service.service';
+import { StateService } from 'src/app/service/state.service';
 import { UserService } from 'src/app/service/user.service';
 
 @Component({
@@ -8,11 +9,19 @@ import { UserService } from 'src/app/service/user.service';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit{
 
   public loggedIn = false;
   user:any
-  constructor(private _userService: UserService, private _loginService:LoginServiceService){}
+  constructor(private _userService: UserService, private _loginService:LoginServiceService, private _stateService: StateService){}
+  ngOnInit(): void {
+    this._stateService.showHeader.next(false);
+    this._stateService.showFooter.next(false);
+  }
+  ngOnDestroy(): void {
+    this._stateService.showHeader.next(true);
+    this._stateService.showFooter.next(true);
+  }
   getUser(){
     this._userService.getUser().subscribe(
       user =>{
