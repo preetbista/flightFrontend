@@ -26,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { MatIcon } from '@angular/material/icon';
+import { NgHelmetModule } from 'ng-helmet';
+
 
 @NgModule({
   declarations: [
@@ -57,7 +58,9 @@ import { MatIcon } from '@angular/material/icon';
     MdbValidationModule,
     NgbModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgHelmetModule,
+
   ],
   providers: [
     {

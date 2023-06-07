@@ -7,24 +7,29 @@ const routes: Routes = [
   {
     path:'',
   pathMatch: 'full',
+
   redirectTo: 'user/home'
   },
   {
     path:'user',
+    title: 'Home',
     loadChildren: () => import('./user/user.module').then(u => UserModule)
   },
 
 {
   path: 'auth',
+  title: 'Login',
   loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
 },
 
 {
   path:'admin',
+  title: 'Admin',
   loadChildren: () => import('./admin/admin.module').then(t  => t.AdminModule)
 },
 {
   path: '**',
+  title: 'Oooopsss !!!',
   component: PageNotFoundComponent
 },
 
