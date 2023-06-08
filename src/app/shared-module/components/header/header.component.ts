@@ -19,11 +19,14 @@ export class HeaderComponent implements OnInit, OnDestroy{
   private subscriptions: Subscription;
   private headerShowSubscrition: Subscription;
 
+  public users = [];
+  public errorMsg:string;
+
 
   constructor(
     private loginService: LoginServiceService,
-    private _userService: UserService,
-    private _stateService: StateService
+    private _stateService: StateService,
+    private _userService:UserService
     ) {
 
       this.subscriptions = new Subscription();
@@ -35,6 +38,13 @@ export class HeaderComponent implements OnInit, OnDestroy{
         this.showHeader = res;
       });
       this.subscriptions.add(this.headerShowSubscrition);
+
+      this._userService.getUserName()
+      .subscribe({
+        next:(data) => this.users = data,
+        error: error => this.errorMsg = error,
+        complete: () => {}
+      })
     }
 
 

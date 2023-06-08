@@ -15,7 +15,11 @@
           <div class="dropdown-content">
             <img [src]="selectedImage" alt="Avatar" style="margin-left: 0px; width: 120px" />
       <li>
-        <a id="lgt" *ngIf="loggedIn" class="logout">preetbista</a>
+        <a id="lgt" *ngIf="loggedIn" class="logout">
+      <li *ngFor="let user of users">
+        {{user.userName}}
+      </li>
+      </a>
       </li>
       <hr class="underline" />
       <li>
