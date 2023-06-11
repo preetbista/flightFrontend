@@ -60,6 +60,7 @@ import { NgHelmetModule } from 'ng-helmet';
     HttpClientModule,
     FontAwesomeModule,
     NgHelmetModule,
+    FontAwesomeModule
 
   ],
   providers: [
