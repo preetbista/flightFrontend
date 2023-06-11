@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
 
   public users = [];
   public errorMsg:string;
-
+  username: string;
 
   constructor(
     private loginService: LoginServiceService,
@@ -39,12 +39,18 @@ export class HeaderComponent implements OnInit, OnDestroy{
       });
       this.subscriptions.add(this.headerShowSubscrition);
 
-      this._userService.getUserName()
+      this._userService.getUserNames()
       .subscribe({
         next:(data) => this.users = data,
         error: error => this.errorMsg = error,
         complete: () => {}
       })
+      
+      this._userService.usernameSubject.asObservable().subscribe(
+        (_username) =>{
+          this.username = _username;
+        }
+      )
     }
 
 

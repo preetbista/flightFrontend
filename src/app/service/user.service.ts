@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable, catchError, throwError, BehaviorSubject } from 'rxjs';
 import { User } from '../user/user';
 
 
@@ -17,10 +17,18 @@ export class UserService {
     return this.http.get(`${this._baseUrl}/users`)
   }
 
-  getUserName() : Observable<User[]>{
+  getUserNames() : Observable<User[]>{
     return this.http.get<User[]>(`${this._baseUrl}/users`)
     .pipe(catchError(this.errorHandler));
   }
+
+  usernameSubject = new BehaviorSubject<string>('');
+  setUser(_username: string){
+    
+    console.log(_username," setting ")
+    this.usernameSubject.next(_username);
+  }
+
 
   errorHandler(error: HttpErrorResponse){
     return throwError(() => new Error("Username cannot be retrieved"));

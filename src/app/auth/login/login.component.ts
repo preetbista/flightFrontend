@@ -42,6 +42,7 @@ export class LoginComponent implements OnInit {
        .subscribe((response:any) => {
           console.log(response)
           this._loginService.loginUser(response.token)
+          this._userService.setUser(response.username);
           window.location.href="/admin/dashboard"
        },
        error => {

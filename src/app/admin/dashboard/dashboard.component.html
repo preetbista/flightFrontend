@@ -1,10 +1,37 @@
-<body>
-  <div class="wrapper">
-    <div class="navbar">
-      <!--Top menu -->
-      <div class="sidebar">
-        <button (click)="logoutUser()" routerLink="/auth/login">Logout</button>
-      </div>
+<div class="sidebar">
+  <nav>
+    <a href="/admin/dashboard"><img class="img" src="../../../assets/images/admin.png" style="width: 60px;" /></a>
+    <div class="list">
+      <ul>
+        <li>
+          <a routerLink="/admin/dashboard/admin_home">
+            <span class="fa fa-home"></span>
+            <span class="name"> &nbsp;Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="fa-solid fa-chart-area"></span>
+            <span class="name"> &nbsp;Analytics</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="fa-solid fa-users"></span>
+            <span class="name"> &nbsp;Users</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="name"> &nbsp;Tickets</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <span class="name"> &nbsp;Contacts</span>
+          </a>
+        </li>
+      </ul>
     </div>
-  </div>
-</body>
+  </nav>
+</div>

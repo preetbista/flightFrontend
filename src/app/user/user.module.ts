@@ -12,6 +12,7 @@ import { CompanyComponent } from './company/company.component';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
 import { NgHelmetModule } from 'ng-helmet';
+import { UserService } from '../service/user.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { NgHelmetModule } from 'ng-helmet';
     NgHelmetModule
   ],
   providers: [
-
+    UserService
   ],
   exports: [UserComponent, TeamComponent, GalleryComponent, CompanyComponent],
 })

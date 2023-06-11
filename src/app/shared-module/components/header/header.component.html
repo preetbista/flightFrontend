@@ -16,10 +16,8 @@
             <img [src]="selectedImage" alt="Avatar" style="margin-left: 0px; width: 120px" />
       <li>
         <a id="lgt" *ngIf="loggedIn" class="logout">
-      <li *ngFor="let user of users">
-        {{user.userName}}
-      </li>
-      </a>
+          {{username}}
+        </a>
       </li>
       <hr class="underline" />
       <li>
