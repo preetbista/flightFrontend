@@ -9,6 +9,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgIf } from '@angular/common';
+import {MatChipsModule} from '@angular/material/chips';
 
 /**
  * @title Stepper overview
@@ -28,7 +29,8 @@ import { NgIf } from '@angular/common';
     MatSelectModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    NgIf
+    NgIf,
+    MatChipsModule
   ],
 })
 export class BookFlightComponent {
@@ -54,7 +56,11 @@ export class BookFlightComponent {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
+  selectedOption: string;
 
+  changeSelected(option:string){
+    this.selectedOption = option
+  }
 
 }
 
