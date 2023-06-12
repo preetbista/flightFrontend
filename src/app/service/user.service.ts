@@ -11,7 +11,11 @@ export class UserService {
 
   _baseUrl  = 'http://localhost:8085'
 
-  constructor(private http:HttpClient) {}
+  constructor(private http:HttpClient) {
+
+    let username = localStorage.getItem("username");
+    if(username)this.setUser(username)
+  }
 
   getUser(){
     return this.http.get(`${this._baseUrl}/users`)
@@ -24,7 +28,6 @@ export class UserService {
 
   usernameSubject = new BehaviorSubject<string>('');
   setUser(_username: string){
-    
     console.log(_username," setting ")
     this.usernameSubject.next(_username);
   }
