@@ -16,14 +16,21 @@ export class LoginServiceService {
     return this.http.post(`${this._baseUrl}/login`,credentials)
   }
 
-  loginUser(token: string){
+  loginUser(token: string, username:string){
     localStorage.setItem("token", token)
+    localStorage.setItem("username", username)
     return true;
   }
 
   isLoggedIn(){
     let token = localStorage.getItem("token");
-    if(token == undefined || token === '' || token == null){
+    let username = localStorage.getItem("username");
+    // if(token == undefined || token === '' || token == null){
+    //   return false;
+    // }else{
+    //   return true;
+    // }
+    if(username == undefined || username === '' || username == null){
       return false;
     }else{
       return true;
@@ -37,5 +44,9 @@ export class LoginServiceService {
 
   getToken(){
     return localStorage.getItem("token")
+  }
+
+  getUsername(){
+    return localStorage.getItem("username")
   }
 }

@@ -41,9 +41,10 @@ export class LoginComponent implements OnInit {
        this._loginService.generateToken(this.credentials)
        .subscribe((response:any) => {
           console.log(response)
-          this._loginService.loginUser(response.token)
-          this._userService.setUser(response.username);
-          window.location.href="/admin/dashboard"
+          this._loginService.loginUser(response.token, response.username)
+          // this._userService.setUser(response.username);
+          this._route.navigate(['user', 'home']);
+
        },
        error => {
           console.log(error)
@@ -55,7 +56,8 @@ export class LoginComponent implements OnInit {
 
   redirectToHomePageIfLoggedIn() {
     if (this._loginService.isLoggedIn()) {
-      window.location.href = "/user/home"
+      // window.location.href = "/user/home"
+      this._route.navigate(['user', 'home']);
     }
   }
 
