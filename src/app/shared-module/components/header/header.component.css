@@ -107,3 +107,52 @@ hr.underline {
   position: absolute;
   margin-left: 2px;
 }
+
+@media (max-width: 768px) {
+  nav img {
+    margin-top: 8px;
+    margin-left: 10px;
+    width: 60px;
+  }
+
+  nav ul {
+    margin-top: 7px;
+    float: none;
+    text-align: center;
+  }
+
+  ul li {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .dropdown-content {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .logout,
+  .un {
+    display: block;
+    text-align: center;
+    margin: 5px 0;
+    background: none;
+  }
+
+  .logout:hover,
+  .un:hover {
+    background: none;
+    background-size: 0% 2px;
+  }
+
+  .logout::after,
+  .un::after {
+    display: none;
+  }
+}

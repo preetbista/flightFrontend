@@ -32,7 +32,6 @@
             <mat-label>Phone Number</mat-label>
             <input matInput type="number" placeholder="Mobile Number" maxlength="10" formControlName="firstCtrl"
               required>
-
           </mat-form-field>
           <div style="margin-top: 10px;"></div>
           <mat-form-field>
@@ -59,10 +58,26 @@
       </mat-step>
       <mat-step [stepControl]="secondFormGroup" label="Payment Details">
         <form [formGroup]="secondFormGroup">
-          <mat-form-field>
-            <mat-label>Address</mat-label>
-            <input matInput formControlName="secondCtrl" placeholder="Pulchowk, Lalitpur" required>
+          <mat-chip-listbox aria-label="Fish selection" [(ngModel)]="selectedOption">
+            <mat-chip-option class="esewa" (selectionChange)="changeSelected('Esewa')" value="Esewa"
+              [selected]="selectedOption === 'Esewa'">Esewa</mat-chip-option>
+            <mat-chip-option color="accent" (selectionChange)="changeSelected('FonePay')" value="FonePay"
+              [selected]="selectedOption === 'FonePay'">FonePay</mat-chip-option>
+          </mat-chip-listbox>
+
+          <mat-form-field floatLabel="always">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" [value]="10000">
+            <span matTextPrefix>Rs.&nbsp;</span>
           </mat-form-field>
+
+          <div *ngIf="selectedOption === 'FonePay'">
+            <mat-form-field floatLabel="always">
+              <mat-label>Account Number</mat-label>
+              <input matInput type="number" placeholder="Account Number">
+              <span matTextPrefix>Ac.&nbsp;</span>
+            </mat-form-field>
+          </div>
           <div>
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button matStepperNext>Next</button>

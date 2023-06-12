@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
     }
 
     ngOnInit(): void {
-      this.loggedIn = this.loginService.isLoggedIn()
+      // this.loggedIn = this.loginService.isLoggedIn()
       this.headerShowSubscrition = this._stateService.showHeader.subscribe(res => {
         this.showHeader = res;
       });
@@ -45,9 +45,11 @@ export class HeaderComponent implements OnInit, OnDestroy{
         error: error => this.errorMsg = error,
         complete: () => {}
       })
-      
-      this._userService.usernameSubject.asObservable().subscribe(
+
+      this._userService.usernameSubject.subscribe(
         (_username) =>{
+          // debugger;
+          this.loggedIn = !!_username;
           this.username = _username;
         }
       )
