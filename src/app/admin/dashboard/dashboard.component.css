@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 .sidebar {
+
   background-color: bisque;
   width: 60px; /* Initial width */
   height: 100%;
@@ -21,6 +23,7 @@ li {
   list-style-type: none;
   margin-top: 20px;
   font-weight: 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
 a:hover {
@@ -39,3 +42,4 @@ a:hover {
 .sidebar a:hover .name {
   opacity: 1;
 }
+
