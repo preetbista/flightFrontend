@@ -42,9 +42,11 @@ export class LoginComponent implements OnInit {
        .subscribe((response:any) => {
           console.log(response)
           this._loginService.loginUser(response.token, response.username)
-          // this._userService.setUser(response.username);
-          this._route.navigate(['user', 'home']);
-
+          if (response.username === 'preetbista') {
+            this._route.navigate(['admin', 'dashboard']);
+          } else {
+            this._route.navigate(['user', 'home']);
+          }
        },
        error => {
           console.log(error)

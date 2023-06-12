@@ -56,7 +56,7 @@ export class BookFlightComponent {
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
 
-  selectedOption: string;
+  selectedOption: string ='Esewa';
 
   changeSelected(option:string){
     this.selectedOption = option

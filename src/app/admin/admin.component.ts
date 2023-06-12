@@ -13,7 +13,7 @@ export class AdminComponent implements OnInit, OnDestroy {
   constructor(private _stateService: StateService) {}
 
   ngOnInit(): void {
-    
+
     this._stateService.showHeader.next(false);
     this._stateService.showFooter.next(false);
   }
@@ -21,6 +21,4 @@ export class AdminComponent implements OnInit, OnDestroy {
     this._stateService.showHeader.next(true);
     this._stateService.showFooter.next(true);
   }
-
-
 }

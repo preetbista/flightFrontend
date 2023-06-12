@@ -58,9 +58,9 @@
       </mat-step>
       <mat-step [stepControl]="secondFormGroup" label="Payment Details">
         <form [formGroup]="secondFormGroup">
-          <mat-chip-listbox aria-label="Fish selection" [(ngModel)]="selectedOption">
+          <mat-chip-listbox aria-label="Fish selection" color="warn" [(ngModel)]="selectedOption">
             <mat-chip-option class="esewa" (selectionChange)="changeSelected('Esewa')" value="Esewa"
-              [selected]="selectedOption === 'Esewa'">Esewa</mat-chip-option>
+              [selected]="selectedOption === 'Esewa'">eSewa</mat-chip-option>
             <mat-chip-option color="accent" (selectionChange)="changeSelected('FonePay')" value="FonePay"
               [selected]="selectedOption === 'FonePay'">FonePay</mat-chip-option>
           </mat-chip-listbox>
