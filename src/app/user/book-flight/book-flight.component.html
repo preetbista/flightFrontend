@@ -1,9 +1,9 @@
 <div style="margin-top: 90px;">
 
   <div class="form">
-    <mat-stepper [linear]="isLinear" #stepper>
-      <mat-step [stepControl]="firstFormGroup">
-        <form [formGroup]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
 
           <ng-template matStepLabel>Book Flight</ng-template>
           <mat-form-field>
@@ -34,15 +34,18 @@
 
           <mat-form-field style="margin-left: 50px;">
             <mat-label>Phone Number</mat-label>
-            <input matInput type="number" placeholder="Mobile Number" maxlength="10" formControlName="firstCtrl"
-              required>
+            <input matInput type="number" placeholder="Mobile Number" minlength="10" maxlength="10"
+              formControlName="firstCtrl" required>
           </mat-form-field>
 
 
           <mat-form-field style="margin-left: 50px;">
             <mat-label>Available Seat</mat-label>
             <mat-select>
-              <mat-option *ngFor="let seat of seats" [value]="seat">{{ seat }}</mat-option>
+              <mat-option *ngFor="let seat of seats" [value]="seat.seatName"
+                [disabled]="seat.availability !== 'AVAILABLE' ">{{
+                seat.seatName
+                }}</mat-option>
             </mat-select>
           </mat-form-field>
 
@@ -68,10 +71,9 @@
           <div>
             <button mat-button matStepperNext>Next</button>
           </div>
-        </form>
-      </mat-step>
-      <mat-step [stepControl]="secondFormGroup" label="Payment Details">
-        <form [formGroup]="secondFormGroup">
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Payment Details">
+
           <mat-chip-listbox aria-label="Fish selection" color="warn" [(ngModel)]="selectedOption">
             <mat-chip-option class="esewa" (selectionChange)="changeSelected('Esewa')" value="Esewa"
               [selected]="selectedOption === 'Esewa'">eSewa</mat-chip-option>
@@ -96,16 +98,16 @@
             <button mat-button matStepperPrevious>Back</button>
             <button mat-button matStepperNext>Next</button>
           </div>
-        </form>
-      </mat-step>
-      <mat-step>
-        <ng-template matStepLabel>Done</ng-template>
-        <button type="submit" class="btn-bgstroke">Confirm Ticket</button>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button (click)="stepper.reset()">Reset</button>
-        </div>
-      </mat-step>
-    </mat-stepper>
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+          <button type="submit" class="btn-bgstroke">Confirm Ticket</button>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button (click)="stepper.reset()">Reset</button>
+          </div>
+        </mat-step>
+      </mat-stepper>
+    </form>
   </div>
 </div>

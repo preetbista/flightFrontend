@@ -1,3 +1,4 @@
 export interface Seatinterface {
-  seatName: string
+  seatName: string,
+  availability: string
 }

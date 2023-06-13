@@ -7,6 +7,7 @@ import { ContactUsComponent } from "./contact-us/contact-us.component";
 import { TeamComponent } from "./team/team.component";
 import { CompanyComponent } from "./company/company.component";
 import { AuthGuard } from "../service/authguard.guard";
+import { TicketComponent } from "./ticket/ticket.component";
 
 const routes: Routes =[
       {
@@ -29,6 +30,11 @@ const routes: Routes =[
         title: 'Contact Us',
         component: ContactUsComponent,
         canActivate: [AuthGuard]
+      },
+      {
+        path: 'ticket',
+        title: 'Ticket',
+        component: TicketComponent
       },
       {
         path:'team',

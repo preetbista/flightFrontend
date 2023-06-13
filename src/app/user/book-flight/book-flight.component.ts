@@ -6,9 +6,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import { Component, OnInit } from '@angular/core';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { NgIf } from '@angular/common';
+import {MatNativeDateModule, MatOptionModule} from '@angular/material/core';
+import { NgIf, NgForOf } from '@angular/common';
 import {MatChipsModule} from '@angular/material/chips';
 import { SeatserviceService } from 'src/app/service/seatservice.service';
 import { Seatinterface } from 'src/app/service/seatinterface';
@@ -32,7 +31,9 @@ import { Seatinterface } from 'src/app/service/seatinterface';
     MatDatepickerModule,
     MatNativeDateModule,
     NgIf,
-    MatChipsModule
+    NgForOf,
+    MatChipsModule,
+    MatOptionModule
   ],
 })
 export class BookFlightComponent implements OnInit{

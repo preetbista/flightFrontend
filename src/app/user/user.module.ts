@@ -11,10 +11,9 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { CompanyComponent } from './company/company.component';
 import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
-import { NgHelmetModule } from 'ng-helmet';
 import { UserService } from '../service/user.service';
 import { FormModule } from '@coreui/angular';
-import { BrowserModule } from '@angular/platform-browser';
+import { TicketComponent } from './ticket/ticket.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,8 @@ import { BrowserModule } from '@angular/platform-browser';
     UserComponent,
     TeamComponent,
     GalleryComponent,
-    CompanyComponent
+    CompanyComponent,
+    TicketComponent
   ],
   imports: [
     CommonModule,
