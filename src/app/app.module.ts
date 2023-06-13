@@ -27,6 +27,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgHelmetModule } from 'ng-helmet';
+import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import { NgHelmetModule } from 'ng-helmet';
     BrowserAnimationsModule,
     SharedModuleModule,
     AdminModule,
+    CalendarModule,
     MdbAccordionModule,
     MdbCarouselModule,
     MdbCheckboxModule,

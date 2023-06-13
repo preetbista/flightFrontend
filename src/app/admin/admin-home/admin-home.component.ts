@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Inject } from '@angular/core';
 
 @Component({
   selector: 'app-admin-home',

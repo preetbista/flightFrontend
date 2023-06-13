@@ -5,6 +5,7 @@ import { AdminRoutingModule } from './admin.routing';
 import { AdminComponent } from './admin.component';
 import { MatIcon } from '@angular/material/icon';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
   ],
   imports: [
     CommonModule,
+    CalendarModule,
     AdminRoutingModule
   ]
 })
