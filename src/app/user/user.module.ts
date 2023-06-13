@@ -13,6 +13,8 @@ import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common
 import { SharedModuleModule } from '../shared-module/shared-module.module';
 import { NgHelmetModule } from 'ng-helmet';
 import { UserService } from '../service/user.service';
+import { FormModule } from '@coreui/angular';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,7 @@ import { UserService } from '../service/user.service';
     MdbCollapseModule,
     HttpClientModule,
     SharedModuleModule,
-    NgHelmetModule
+    FormModule
   ],
   providers: [
     UserService

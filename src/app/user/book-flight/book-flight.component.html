@@ -10,7 +10,9 @@
             <mat-label>Name</mat-label>
             <input matInput placeholder="First name" formControlName="firstCtrl" required>
           </mat-form-field>
+
           <mat-form-field style="margin-left: 50px;">
+
             <mat-label>Enter your email</mat-label>
             <input matInput placeholder="pat@example.com" formControlName="firstCtrl" required>
             <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
@@ -23,16 +25,27 @@
             <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
+
           <div style="margin-top: 10px;"></div>
           <mat-form-field>
             <mat-label>Address</mat-label>
             <input matInput placeholder="Address" formControlName="firstCtrl" required>
           </mat-form-field>
+
           <mat-form-field style="margin-left: 50px;">
             <mat-label>Phone Number</mat-label>
             <input matInput type="number" placeholder="Mobile Number" maxlength="10" formControlName="firstCtrl"
               required>
           </mat-form-field>
+
+
+          <mat-form-field style="margin-left: 50px;">
+            <mat-label>Available Seat</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let seat of seats" [value]="seat">{{ seat }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
           <div style="margin-top: 10px;"></div>
           <mat-form-field>
             <mat-label>Departure Airport</mat-label>
@@ -51,6 +64,7 @@
               <mat-option value="Barcelona">Barcelona</mat-option>
             </mat-select>
           </mat-form-field>
+
           <div>
             <button mat-button matStepperNext>Next</button>
           </div>

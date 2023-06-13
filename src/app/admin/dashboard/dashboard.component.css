@@ -3,6 +3,7 @@
   position: fixed;
   background-color: bisque;
   width: 60px; /* Initial width */
+  top:0;
   height: 100%;
   transition: width 0.3s ease-in-out;
 }

@@ -8,7 +8,6 @@ import { Injectable } from '@angular/core';
 })
 export class AuthGuard {
   constructor(private _loginService: LoginServiceService, private router:Router) {
-
   }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {

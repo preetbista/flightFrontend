@@ -50,4 +50,5 @@ export class LoginServiceService {
   getUsername(){
     return localStorage.getItem("username")
   }
+
 }
