@@ -190,3 +190,9 @@ display: none;
   color: #ffeba7;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
+@media (max-width: 767px) {
+  .login {
+    height: calc(100vh - 85px); /* Subtract the height of the footer from the viewport height */
+    overflow-y: auto; /* Add scrollbars if the content exceeds the viewport height */
+  }
+}

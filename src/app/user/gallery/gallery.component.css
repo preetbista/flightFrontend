@@ -3,3 +3,12 @@
   margin-top: 85px;
   overflow: hidden;
 }
+.row-cols-md-2 {
+  column-gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .row-cols-md-2 {
+    column-count: 1;
+  }
+}
