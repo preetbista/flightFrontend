@@ -28,6 +28,7 @@ import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgHelmetModule } from 'ng-helmet';
 import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
+import { FullCalendarModule } from '@fullcalendar/angular';
 
 
 @NgModule({
@@ -63,7 +64,6 @@ import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
     FontAwesomeModule,
     NgHelmetModule,
     FontAwesomeModule
-
   ],
   providers: [
     {

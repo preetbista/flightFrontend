@@ -1,7 +1,6 @@
 
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { StateService } from '../service/state.service';
-import { NepaliCalendarService } from './admin-home/nepali-calendar.service';
 
 @Component({
   selector: 'app-admin',
@@ -14,7 +13,7 @@ export class AdminComponent implements OnInit, OnDestroy {
 
   private engDate: any;
 
-  constructor(private _stateService: StateService, private _npCalendar: NepaliCalendarService) {}
+  constructor(private _stateService: StateService) {}
 
   ngOnInit(): void {
 
@@ -26,7 +25,5 @@ export class AdminComponent implements OnInit, OnDestroy {
     this._stateService.showFooter.next(true);
   }
 
-  ConvertNepToEng() {
-    this.engDate = this._npCalendar.ConvertNepToEngDate(this.npDate);
-}
+
 }

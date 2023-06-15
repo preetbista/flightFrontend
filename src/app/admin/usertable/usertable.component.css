@@ -29,3 +29,10 @@ a.btn {
 a {
   margin-right: 10px; /* Adjust the value as needed */
 }
+.columns a span {
+  transition: transform 0.3s;
+}
+
+.columns a:hover span {
+  transform: scale(1.2);
+}
