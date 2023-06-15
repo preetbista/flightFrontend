@@ -45,6 +45,7 @@ export class LoginComponent implements OnInit {
           if (response.username === 'preetbista') {
             this._route.navigate(['admin', 'dashboard']);
           } else {
+            window.location.reload()
             this._route.navigate(['user', 'home']);
           }
        },

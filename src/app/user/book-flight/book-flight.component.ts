@@ -49,6 +49,9 @@ export class BookFlightComponent implements OnInit{
   secondFormGroup = this._formBuilder.group({
     secondCtrl: ['', Validators.required],
   });
+  thirdFormGroup = this._formBuilder.group({
+    thirdCtrl: ['',[Validators.required, Validators.minLength(10), Validators.maxLength(10)]]
+  });
 
   isLinear = true;
 

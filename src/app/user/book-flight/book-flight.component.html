@@ -34,8 +34,7 @@
 
           <mat-form-field style="margin-left: 50px;">
             <mat-label>Phone Number</mat-label>
-            <input matInput type="number" placeholder="Mobile Number" minlength="10" maxlength="10"
-              formControlName="firstCtrl" required>
+            <input matInput type="number" placeholder="Mobile Number" maxlength="10" required>
           </mat-form-field>
 
 
@@ -74,7 +73,7 @@
         </mat-step>
         <mat-step [stepControl]="secondFormGroup" label="Payment Details">
 
-          <mat-chip-listbox aria-label="Fish selection" color="warn" [(ngModel)]="selectedOption">
+          <mat-chip-listbox aria-label="Fish selection" color="warn" [value]="selectedOption">
             <mat-chip-option class="esewa" (selectionChange)="changeSelected('Esewa')" value="Esewa"
               [selected]="selectedOption === 'Esewa'">eSewa</mat-chip-option>
             <mat-chip-option color="accent" (selectionChange)="changeSelected('FonePay')" value="FonePay"

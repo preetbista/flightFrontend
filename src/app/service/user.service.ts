@@ -28,7 +28,6 @@ export class UserService {
 
   usernameSubject = new BehaviorSubject<string>('');
   setUser(_username: string){
-    console.log(_username," setting ")
     this.usernameSubject.next(_username);
   }
 

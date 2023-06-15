@@ -3,21 +3,28 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminRoutingModule } from './admin.routing';
 import { AdminComponent } from './admin.component';
-import { MatIcon } from '@angular/material/icon';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
+import { UsertableComponent } from './usertable/usertable.component';
+import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
     AdminComponent,
-    AdminHomeComponent
+    AdminHomeComponent,
+    UsertableComponent
   ],
   imports: [
     CommonModule,
     CalendarModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatIconModule
   ]
 })
 export class AdminModule { }

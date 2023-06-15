@@ -17,7 +17,7 @@
           </a>
         </li>
         <li>
-          <a href="">
+          <a routerLink="/admin/dashboard/user_table">
             <span class="fa-solid fa-users"></span>
             <span class="name"> &nbsp;Users</span>
           </a>
@@ -48,7 +48,7 @@
         </li>
 
         <li>
-          <a routerLink="/auth/login">
+          <a routerLink="/auth/login" (click)="logoutUser()">
             <span class="fa fa-sign-out"></span>
             <span class="name"> &nbsp;Sign Out</span>
           </a>
