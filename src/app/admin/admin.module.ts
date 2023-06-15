@@ -9,6 +9,8 @@ import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
 import { UsertableComponent } from './usertable/usertable.component';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { NepaliCalendarService } from './admin-home/nepali-calendar.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -24,7 +26,12 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
     AdminRoutingModule,
     MatTableModule,
     MatPaginatorModule,
-    MatIconModule
-  ]
+    MatIconModule,
+    FormsModule
+  ],
+  exports: [
+    AdminHomeComponent
+  ],
+  providers: [NepaliCalendarService]
 })
 export class AdminModule { }
