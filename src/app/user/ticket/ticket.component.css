@@ -1,9 +1,3 @@
-body{
-  margin: 0;
-  padding: 0;
-  background: #fff;
-}
-
 .box{
   position: absolute;
   top: calc(50% - 125px);
