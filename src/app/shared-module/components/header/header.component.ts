@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit, OnDestroy{
       });
       this.subscriptions.add(this.headerShowSubscrition);
 
-      this._userService.getUserNames()
+      this._userService.getUsers()
       .subscribe({
         next:(data) => this.users = data,
         error: error => this.errorMsg = error,
