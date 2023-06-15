@@ -21,7 +21,7 @@ export class UserService {
     return this.http.get(`${this._baseUrl}/users`)
   }
 
-  getUserNames() : Observable<User[]>{
+  getUsers() : Observable<User[]>{
     return this.http.get<User[]>(`${this._baseUrl}/users`)
     .pipe(catchError(this.errorHandler));
   }
