@@ -5,6 +5,7 @@ import { AuthGuard } from "../service/authguard.guard";
 import { AdminHomeComponent } from "./admin-home/admin-home.component";
 import { RouteGuard } from "../service/routeguard.guard";
 import { UsertableComponent } from "./usertable/usertable.component";
+import { TicketComponent } from "./ticket_table/ticket.component";
 
 const routes: Routes =[
 
@@ -20,6 +21,10 @@ const routes: Routes =[
       {
         path: 'user_table',
         component: UsertableComponent
+      },
+      {
+        path: 'ticket_table',
+        component: TicketComponent
       }
     ]
   }

@@ -9,6 +9,7 @@ import { UsertableComponent } from './usertable/usertable.component';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { TicketComponent } from './ticket_table/ticket.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     DashboardComponent,
     AdminComponent,
     AdminComponent,
-    UsertableComponent
+    UsertableComponent,
+    TicketComponent
   ],
   imports: [
     CommonModule,
