@@ -7,6 +7,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthInterceptor } from '../interceptors/auth.interceptor';
 import { SharedModuleModule } from '../shared-module/shared-module.module';
+import { ToastModule } from '@coreui/angular';
 
 
 @NgModule({
@@ -19,7 +20,9 @@ import { SharedModuleModule } from '../shared-module/shared-module.module';
     AuthRoutingModule,
     HttpClientModule,
     FormsModule,
-    SharedModuleModule
+    SharedModuleModule,
+    ToastModule
+
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

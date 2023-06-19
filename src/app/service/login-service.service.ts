@@ -10,10 +10,15 @@ export class LoginServiceService {
 
   _baseUrl = "http://localhost:8085"
 
+
   constructor(private http:HttpClient) {}
 
   generateToken(credentials:any){
     return this.http.post(`${this._baseUrl}/login`,credentials)
+  }
+
+  registerUser(informations:any){
+    return this.http.post(`${this._baseUrl}/users/add`,informations)
   }
 
   loginUser(token: string, username:string){

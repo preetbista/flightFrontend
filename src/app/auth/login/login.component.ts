@@ -27,6 +27,13 @@ export class LoginComponent implements OnInit {
     password: ''
   }
 
+  informations = {
+    userName: '',
+    password: '',
+    email: '',
+    age: ''
+  }
+
   constructor(private _loginService: LoginServiceService,private _userService:UserService , private _route:Router){
 
   }
@@ -34,7 +41,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.redirectToHomePageIfLoggedIn();
   }
-
 
   onSubmit(){
     if((this.credentials.userName !='' && this.credentials.password!='') && (this.credentials.userName!=null && this.credentials.password!= null)){
@@ -57,11 +63,44 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  onRegister(){
+      if((this.informations.userName != '' && this.informations.password !='' && this.informations.age!=''
+      && this.informations.email != '') && (this.informations.userName != null && this.informations.password !=null && this.informations.age!=null
+      && this.informations.email != null)){
+        this._loginService.registerUser(this.informations)
+        .subscribe({
+          next: (response: any) => {
+            window.location.reload()
+          },
+          error: (error) => alert("Could not register. Try again")
+        }
+          )
+
+      }
+  }
+
   redirectToHomePageIfLoggedIn() {
     if (this._loginService.isLoggedIn()) {
       // window.location.href = "/user/home"
       this._route.navigate(['user', 'home']);
     }
+  }
+
+  position = 'top-end';
+  visible = false;
+  percentage = 0;
+
+  toggleToast() {
+    this.visible = !this.visible;
+  }
+
+  onVisibleChange($event: boolean) {
+    this.visible = $event;
+    this.percentage = !this.visible ? 0 : this.percentage;
+  }
+
+  onTimerChange($event: number) {
+    this.percentage = $event * 25;
   }
 
 }

@@ -35,7 +35,7 @@ export class TicketComponent {
     this._ticketService.getTickets().subscribe({
       next: (data) => {
         this.tickets = data;
-         console.log(this.tickets)
+        // console.log(this.tickets)
         this.dataSource.data = this.tickets;
       },
       error: (error) => (this.errorMsg = error),
