@@ -47,25 +47,31 @@
                 <div class="card-back">
                   <div class="center-wrap">
                     <div class="section text-center">
-                      <h4 class="mb-3 pb-3">Sign Up</h4>
-                      <div class="form-group">
-                        <input type="text" class="form-style" placeholder="Username" name="userName" required ngModel />
-                        <i class="input-icon uil uil-user"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="tel" class="form-style" placeholder="Age" name="age" required ngModel />
-                        <i class="input-icon uil uil-18-plus"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="email" class="form-style" placeholder="Email" name="email" required ngModel />
-                        <i class="input-icon uil uil-at"></i>
-                      </div>
-                      <div class="form-group mt-2">
-                        <input type="password" class="form-style" placeholder="Password" name="password" required
-                          ngModel />
-                        <i class="input-icon uil uil-lock-alt"></i>
-                      </div>
-                      <button type="submit" class="btn mt-4">Register</button>
+                      <form (ngSubmit)="onRegister()">
+                        <h4 class="mb-3 pb-3">Sign Up</h4>
+                        <div class="form-group">
+                          <input type="text" class="form-style" placeholder="Username" name="userName" required
+                            [(ngModel)]="informations.userName" />
+                          <i class="input-icon uil uil-user"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input type="tel" class="form-style" placeholder="Age" name="age" required
+                            [(ngModel)]="informations.age" />
+                          <i class="input-icon uil uil-18-plus"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input type="email" class="form-style" placeholder="Email" name="email" required
+                            [(ngModel)]="informations.email" />
+                          <i class="input-icon uil uil-at"></i>
+                        </div>
+                        <div class="form-group mt-2">
+                          <input type="password" class="form-style" placeholder="Password" name="password"
+                            [(ngModel)]="informations.password" ngModel />
+                          <i class="input-icon uil uil-lock-alt"></i>
+                        </div>
+
+                        <button type="submit" class="btn mt-4">Register</button>
+                      </form>
                     </div>
                   </div>
                 </div>
