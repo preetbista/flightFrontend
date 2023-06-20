@@ -11,7 +11,7 @@ import { Observable, Subscription } from 'rxjs';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit, OnDestroy {
+export class LoginComponent implements OnInit {
   // constructor(private _router: Router, private _apiService: HomeApiService) {}
 
   // public login() {
@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   //   })
   // }
 
-  registerSubscription : Subscription;
+
   credentials = {
     userName: '',
     password: ''
@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
   onSubmit(){
     if((this.credentials.userName !='' && this.credentials.password!='') && (this.credentials.userName!=null && this.credentials.password!= null)){
-       this.registerSubscription =  this._loginService.generateToken(this.credentials)
+        this._loginService.generateToken(this.credentials)
        .subscribe((response:any) => {
           console.log(response)
           this._loginService.loginUser(response.token, response.username)
@@ -106,9 +106,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     this.percentage = $event * 25;
   }
 
-  ngOnDestroy(): void {
-      this.registerSubscription.unsubscribe();
-  }
+
 
 }
 
