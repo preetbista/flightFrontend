@@ -1,0 +1,38 @@
+table {
+  width: 50%;
+  margin-top: 100px;
+  position: relative;
+}
+.container {
+  margin: 0;
+  padding: 0;
+}
+
+.columns {
+  margin: 0;
+  padding: 0;
+}
+.main{
+  margin-left: 17%;
+  margin-right: 15%;
+}
+a.btn:hover,
+a.btn:focus {
+  transform: scale(1.1);
+  transition-duration: 0.5s;
+}
+
+a.btn {
+  transform: scale(0.8);
+  transition-duration: 0.5s;
+}
+a {
+  margin-right: 10px; /* Adjust the value as needed */
+}
+.columns a span {
+  transition: transform 0.3s;
+}
+
+.columns a:hover span {
+  transform: scale(1.2);
+}
