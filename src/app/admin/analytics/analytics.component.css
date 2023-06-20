@@ -1,0 +1,25 @@
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 70%;
+  margin-right: 20px;
+  margin: 0 auto;
+}
+.chart-title {
+ color: gray;
+  margin-top: 10px;
+}
+.line-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 70%;
+  margin-right: 20px;
+  margin: 0 auto;
+}
+
