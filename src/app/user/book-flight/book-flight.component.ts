@@ -38,10 +38,15 @@ import { Seatinterface } from 'src/app/service/seatinterface';
 })
 export class BookFlightComponent implements OnInit{
 
- constructor(private _formBuilder: FormBuilder, private _seatService:SeatserviceService){}
+
+ constructor(private _formBuilder: FormBuilder, private _seatService:SeatserviceService){
+
+ }
 
   public seats: Seatinterface[] = [];
   public errorMsg:string;
+
+
 
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
@@ -82,6 +87,8 @@ export class BookFlightComponent implements OnInit{
         complete: () => {},
       });
     }
+
+
 
 }
 

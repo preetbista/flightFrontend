@@ -28,13 +28,21 @@
 
           <div style="margin-top: 10px;"></div>
           <mat-form-field>
-            <mat-label>Address</mat-label>
-            <input matInput placeholder="Address" formControlName="firstCtrl" required>
+            <mat-label>Departure Time</mat-label>
+            <mat-select name=" departureAirport" required>
+              <mat-option value="Kathmandu">10:30 A.M</mat-option>
+              <mat-option value="Pokhara">2:45 P.M</mat-option>
+              <mat-option value="Biratnagar">7:00 P.M</mat-option>
+            </mat-select>
           </mat-form-field>
 
           <mat-form-field style="margin-left: 50px;">
-            <mat-label>Phone Number</mat-label>
-            <input matInput type="number" placeholder="Mobile Number" maxlength="10" required>
+            <mat-label>Arrival Time</mat-label>
+            <mat-select name=" departureAirport" required>
+              <mat-option value="Kathmandu">12:30 P.M</mat-option>
+              <mat-option value="Pokhara">5:30 P.M</mat-option>
+              <mat-option value="Biratnagar">10:15 P.M</mat-option>
+            </mat-select>
           </mat-form-field>
 
 
