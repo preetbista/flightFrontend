@@ -10,6 +10,8 @@ import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { TicketComponent } from './ticket_table/ticket.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
+import { ViewcontactComponent } from './viewcontact/viewcontact.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { TicketComponent } from './ticket_table/ticket.component';
     AdminComponent,
     AdminComponent,
     UsertableComponent,
-    TicketComponent
+    TicketComponent,
+    AnalyticsComponent,
+    ViewcontactComponent
   ],
   imports: [
     CommonModule,
