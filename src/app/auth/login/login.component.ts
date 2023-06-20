@@ -1,16 +1,17 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { LoginServiceService } from '../../service/login-service.service';
 import { UserService } from 'src/app/service/user.service';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent implements OnInit, OnDestroy {
   // constructor(private _router: Router, private _apiService: HomeApiService) {}
 
   // public login() {
@@ -22,6 +23,7 @@ export class LoginComponent implements OnInit {
   //   })
   // }
 
+  registerSubscription : Subscription;
   credentials = {
     userName: '',
     password: ''
@@ -44,7 +46,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     if((this.credentials.userName !='' && this.credentials.password!='') && (this.credentials.userName!=null && this.credentials.password!= null)){
-       this._loginService.generateToken(this.credentials)
+       this.registerSubscription =  this._loginService.generateToken(this.credentials)
        .subscribe((response:any) => {
           console.log(response)
           this._loginService.loginUser(response.token, response.username)
@@ -76,6 +78,7 @@ export class LoginComponent implements OnInit {
         }
           )
 
+
       }
   }
 
@@ -101,6 +104,10 @@ export class LoginComponent implements OnInit {
 
   onTimerChange($event: number) {
     this.percentage = $event * 25;
+  }
+
+  ngOnDestroy(): void {
+      this.registerSubscription.unsubscribe();
   }
 
 }

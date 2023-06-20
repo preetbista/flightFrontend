@@ -1,27 +1,30 @@
 <div style="margin-top: 85px; background: #DADADA;
 text-align: center;">
-  <div class="card card-2" cdkDrag>
-    <mat-form-field appearance="outline" style="margin-top: 10px; width: 270px;">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Your Name" [formControl]="name" required>
-      <mat-error *ngIf="name.invalid">{{getErrorName()}}</mat-error>
-    </mat-form-field>
 
-    <mat-form-field appearance="outline" style="width: 270px;">
-      <mat-label>Email</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email" required>
-      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-    </mat-form-field>
+  <form (ngSubmit)="onSubmit()">
+    <div class="card card-2" cdkDrag>
 
-    <mat-form-field appearance="outline" style="width: 270px;">
-      <mat-label>Message</mat-label>
-      <textarea matInput></textarea>
-    </mat-form-field>
+      <mat-form-field appearance="outline" style="margin-top: 10px; width: 270px;">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Your Name" name="name" [(ngModel)]="contacts.name" required>
+        <mat-error *ngIf="name.invalid">{{getErrorName()}}</mat-error>
+      </mat-form-field>
 
-    <div>
+      <mat-form-field appearance="outline" style="width: 270px;">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="pat@example.com" name="email" [(ngModel)]="contacts.email" [formControl]="email"
+          required>
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" style="width: 270px;">
+        <mat-label>Message</mat-label>
+        <textarea name="message" [(ngModel)]="contacts.message" matInput></textarea>
+      </mat-form-field>
+
+
       <button type="submit" class="btn mt-4">Send</button>
+
     </div>
-
-
-  </div>
+  </form>
 </div>

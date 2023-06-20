@@ -8,13 +8,19 @@ import { Contact } from '../admin/viewcontact/viewcontact.component';
 })
 export class ContactService {
 
-  _baseUrl = 'http://localhost:8095'
+  _baseUrl = "http://localhost:8095"
 
   constructor(private http:HttpClient) { }
 
   getContacts() : Observable<Contact[]>{
+
     return this.http.get<Contact[]>(`${this._baseUrl}/contact`)
     .pipe(catchError(this.errorHandler));
+  }
+
+  addContact(contacts:any){
+
+      return this.http.post(`${this._baseUrl}/contact/add`,contacts);
   }
 
   errorHandler(error: HttpErrorResponse){
